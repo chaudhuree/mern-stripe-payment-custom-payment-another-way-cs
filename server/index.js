@@ -2,10 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const uuid = require("uuid").v4;
 const cors = require("cors");
+require("dotenv").config();
 
-const stripe = require("stripe")(
-  "sk_test_51NRJ7VBhBYaeHe6cQlo6YHpD9kcHmVRmDG95n48PFyBpcWKi5BTGLW46twI5pgtHu2qW3mbyxXJAzSMiyoH7xZcw00OGrRzlMI"
-);
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 const app = express();
 
