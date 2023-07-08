@@ -7,9 +7,9 @@ import "./App.css";
 function App() {
   // product object for amount
   const [product, setProduct] = useState({
-    name: "sample pruduct",
-    price: 10,
-    description: "This is a product discription",
+    name: "sample T-shirt",
+    price: 120,
+    description: "This is a product discription for sample T-shirt",
   });
 
   // handle token
@@ -32,7 +32,12 @@ function App() {
       <div className=" main-box container d-flex justify-content-center h-100 text-center align-items-center">
         <div className="row ">
           <div className="col-md-12 my-5">
-            <h1>stripe payment</h1>
+            <h1 className="text-uppercase">stripe payment</h1>
+          </div>
+          <div className="col-md-12 text-center mb-5">
+            <h3>product name: {product.name}</h3>
+            <h3>product price: {product.price}</h3>
+            <h3>product description: {product.description}</h3>
           </div>
           <div className="col-md-12">
             <StripeCheckout

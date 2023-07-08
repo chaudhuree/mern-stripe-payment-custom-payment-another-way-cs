@@ -1,3 +1,10 @@
 .main-box {
   height: 100vh !important;
 }
+.StripeCheckout {
+  background: transparent !important;
+}
+.StripeCheckout span {
+  background: rgb(130, 69, 130) !important;
+  width: 200px !important;
+}
